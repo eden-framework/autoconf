@@ -12,7 +12,7 @@ func FromEnv(confPrefix string, conf []interface{}) []envconfig.EnvVar {
 		if err != nil {
 			logrus.Panic(err)
 		}
-		envconfig.Usage(confPrefix, c)
+		envconfig.Usage(confPrefix, c, true)
 
 		envs, err := envconfig.GatherInfo(confPrefix, c)
 		if err != nil {
