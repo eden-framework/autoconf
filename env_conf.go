@@ -7,7 +7,7 @@ import (
 
 func FromEnv(confPrefix string, conf []interface{}) {
 	// atempt to load local.yml
-	_ = envconfig.LoadDefaultFromYml("./build/configs/local.yml")
+	_ = envconfig.LoadDefaultFromYml("./configs/local.yml")
 
 	for _, c := range conf {
 		err := envconfig.Process(confPrefix, c)
